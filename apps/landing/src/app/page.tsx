@@ -23,12 +23,12 @@ export default function Home() {
           <OutlineButton variant="tertiary" asChild>
             <Link href="#how-it-works">How it Works</Link>
           </OutlineButton>
-          <LinkButton href="#" variant="tertiary">
-            About
-          </LinkButton>
-          <LinkButton href="#" variant="tertiary">
-            Apply now
-          </LinkButton>
+          <OutlineButton variant="tertiary">
+            <Link href="#how-it-works">About</Link>
+          </OutlineButton>
+          <OutlineButton variant="tertiary">
+            <Link href="#apply-now">Apply now</Link>
+          </OutlineButton>
         </div>
 
         <div className="flex flex-col place-items-center mt-auto mb-auto">
@@ -40,9 +40,9 @@ export default function Home() {
             A members network of beautiful homes to rent and swap
           </p>
 
-          <LinkButton href="#" variant="primary">
-            Apply now
-          </LinkButton>
+          <OutlineButton variant="primary">
+            <Link href="#apply-now">Apply now</Link>
+          </OutlineButton>
         </div>
       </section>
 

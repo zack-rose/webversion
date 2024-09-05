@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
@@ -54,19 +53,9 @@ const RentalListingCard = ({ title, location, rent }: Props) => {
   }, [api]);
 
   return (
-    <Link
-      href="#"
-      className="hover:shadow-lg hover:rounded-lg hover:p-2 hover:transform ease-in-out hover:scale-[1.02] transition-transform duration-500"
-    >
+    <Link href="#" className="ease-in-out transition-transform duration-500">
       <div className="relative mb-2">
-        <Carousel
-          setApi={setApi}
-          plugins={[
-            Autoplay({
-              delay: 3500,
-            }),
-          ]}
-        >
+        <Carousel setApi={setApi}>
           <CarouselContent>
             {CarouselData.map((_item, index) => (
               <CarouselItem key={index}>

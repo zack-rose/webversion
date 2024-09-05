@@ -1,0 +1,28 @@
+PODS:
+  - Capacitor (6.1.2):
+    - CapacitorCordova
+  - CapacitorCommunitySafeArea (6.0.0-alpha.6):
+    - Capacitor
+  - CapacitorCordova (6.1.2)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios`)"
+  - "CapacitorCommunitySafeArea (from `../../../../node_modules/.pnpm/@capacitor-community+safe-area@6.0.0-alpha.6_@capacitor+core@6.1.2/node_modules/@capacitor-community/safe-area`)"
+  - "CapacitorCordova (from `../../../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios"
+  CapacitorCommunitySafeArea:
+    :path: "../../../../node_modules/.pnpm/@capacitor-community+safe-area@6.0.0-alpha.6_@capacitor+core@6.1.2/node_modules/@capacitor-community/safe-area"
+  CapacitorCordova:
+    :path: "../../../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios"
+
+SPEC CHECKSUMS:
+  Capacitor: 679f9673fdf30597493a6362a5d5bf233d46abc2
+  CapacitorCommunitySafeArea: 75387b732c4fcb2e9b635a0116f3f22c61f03124
+  CapacitorCordova: f48c89f96c319101cd2f0ce8a2b7449b5fb8b3dd
+
+PODFILE CHECKSUM: 31bbdeff23528702491fe7744475b5d503f95d7f
+
+COCOAPODS: 1.15.2

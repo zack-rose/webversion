@@ -1,16 +1,16 @@
-export const formatToPounds = (value: string | number) => {
-  const numValue = typeof value === "string" ? parseFloat(value) : value;
+export const formatCurrency = (value: string | number) => {
+	const numValue = typeof value === "string" ? parseFloat(value) : value;
 
-  if (isNaN(numValue)) {
-    return "Invalid input";
-  }
+	if (isNaN(numValue)) {
+		return "Invalid input";
+	}
 
-  const formattedValue = numValue.toLocaleString("en-GB", {
-    style: "currency",
-    currency: "GBP",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
+	const formattedValue = numValue.toLocaleString("en-GB", {
+		style: "currency",
+		currency: "GBP",
+		minimumFractionDigits: 2,
+		maximumFractionDigits: 2,
+	});
 
-  return formattedValue;
+	return formattedValue;
 };

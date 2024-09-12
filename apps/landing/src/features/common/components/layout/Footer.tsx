@@ -6,7 +6,7 @@ import { NavigationLinks, LegalLinks, SocialLinks } from "./FooterLinks";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-3deg-greenish-100 content-spacing pt-[5%] pb-[3%] space-y-10">
+		<footer className="bg-3deg-greenish-100 content-spacing py-[15%] md:pt-[5%] md:pb-[3%] space-y-10">
 			<div className="flex flex-col lg:flex-row gap-6">
 				<div className="space-y-4 lg:w-1/4">
 					<Link href="/">

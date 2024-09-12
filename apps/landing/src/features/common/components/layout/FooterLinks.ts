@@ -15,6 +15,10 @@ export const NavigationLinks = [
 		title: "Messages",
 		href: "#",
 	},
+	{
+		title: "Pricing",
+		href: "/pricing",
+	},
 ];
 
 export const LegalLinks = [
@@ -32,7 +36,7 @@ export const LegalLinks = [
 	},
 	{
 		title: "Contact",
-		href: "#",
+		href: "/contact",
 	},
 ];
 

@@ -1,23 +1,20 @@
 import * as React from "react";
 
 import { cn } from "@/features/common/utils/tailwind";
+import { ErrorMessage } from "../ErrorMessage";
+import { Label } from "../Label";
 
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
-	errorMessage?: string;
+	errorMessage?: string | string[];
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
 	({ className, label, errorMessage, type, ...props }, ref) => {
 		return (
 			<div className="space-y-1 mb-5">
-				<label
-					className="text-3deg-black-300 text-sm font-medium"
-					htmlFor={props.name}
-				>
-					{label}
-				</label>
+				<Label htmlFor={props.name}>{label}</Label>
 
 				<input
 					type={type}
@@ -29,7 +26,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 					{...props}
 				/>
 
-				{errorMessage && <p className="text-red-600 text-xs">{errorMessage}</p>}
+				{errorMessage && <ErrorMessage errorMessage={errorMessage} />}
 			</div>
 		);
 	}

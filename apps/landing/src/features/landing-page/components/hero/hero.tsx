@@ -19,7 +19,7 @@ export const Hero = () => {
 					<Link href="#about">About</Link>
 				</OutlineButton>
 				<OutlineButton variant="tertiary" asChild>
-					<Link href="#apply-now">Apply now</Link>
+					<Link href="/welcome">Apply now</Link>
 				</OutlineButton>
 			</div>
 

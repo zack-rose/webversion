@@ -25,6 +25,7 @@ const config = {
 			colors: {
 				"3deg": {
 					"black-100": "#2A2F27",
+					"black-150": "#040404",
 					"black-200": "#50524F",
 					"black-300": "#322914",
 					"greenish-100": "#B4B5A2",
@@ -37,6 +38,7 @@ const config = {
 					"cream-350": "#DAD1BF",
 					"cream-400": "#FFFAEF",
 					"choco-100": "#463B23",
+					"choco-150": "#CAC5BB",
 					"choco-200": "#4F4734",
 					"choco-300": "#B0AA9D",
 					"choco-400": "#A1907A",

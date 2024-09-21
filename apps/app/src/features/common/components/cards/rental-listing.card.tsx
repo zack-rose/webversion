@@ -20,17 +20,24 @@ import {
 	CarouselPrevious,
 	type CarouselApi,
 } from "@/features/common/components/ui/carousel";
-import { formatCurrency } from "@/features/common/utils";
+import { cn, formatCurrency } from "@/features/common/utils";
+import { Pill } from "../Pill";
 
 interface Props {
 	title: string;
 	location: string;
 	rent: number;
+	heartIconColor?: "chocolate" | "orange";
 }
 
 const CarouselData = Array.from({ length: 5 });
 
-export const RentalListingCard = ({ title, location, rent }: Props) => {
+export const RentalListingCard = ({
+	title,
+	location,
+	rent,
+	heartIconColor = "chocolate",
+}: Props) => {
 	const [api, setApi] = useState<CarouselApi>();
 	const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -69,11 +76,17 @@ export const RentalListingCard = ({ title, location, rent }: Props) => {
 									<Image
 										src="/images/listing-1.png"
 										alt="rental listing"
+										className="object-cover rounded-lg"
 										fill
 									/>
 
 									<button className="absolute top-4 right-4 bg-3deg-cream-200 size-7 rounded-full flex justify-center items-center outline-none">
-										<MdFavorite className="text-3deg-choco-400 size-5" />
+										<MdFavorite
+											className={cn("size-5", {
+												"text-3deg-choco-400": heartIconColor === "chocolate",
+												"text-3deg-orange-100": heartIconColor === "orange",
+											})}
+										/>
 									</button>
 								</div>
 							</CarouselItem>
@@ -111,25 +124,25 @@ export const RentalListingCard = ({ title, location, rent }: Props) => {
 				</p>
 
 				<div className="flex items-center gap-2">
-					<div className="flex gap-1 items-center border border-3deg-black-300 rounded-3xl py-1 px-2 cursor-pointer">
+					<Pill>
 						<MdOutlineAddBusiness className="text-3deg-black-300 text-xl" />
 						<p className="text-3deg-black-300 text-sm">Rent</p>
-					</div>
+					</Pill>
 
-					<div className="flex gap-1 items-center border border-3deg-black-300 rounded-3xl py-1 px-2 cursor-pointer">
+					<Pill>
 						<MdSwapCalls className="text-3deg-black-300 text-xl" />
 						<p className="text-3deg-black-300 text-sm">Rent</p>
-					</div>
+					</Pill>
 
-					<div className="flex gap-1 items-center border border-3deg-black-300 rounded-3xl py-1 px-2 cursor-pointer">
+					<Pill>
 						<MdOutlineBed className="text-3deg-black-300 text-xl" />
 						<p className="text-3deg-black-300 text-sm">2</p>
-					</div>
+					</Pill>
 
-					<div className="flex gap-2 items-center border border-3deg-black-300 rounded-3xl py-1 px-2 cursor-pointer">
+					<Pill>
 						<MdOutlineShower className="text-3deg-black-300 text-xl" />
 						<p className="text-3deg-black-300 text-sm">1</p>
-					</div>
+					</Pill>
 				</div>
 			</Link>
 		</div>

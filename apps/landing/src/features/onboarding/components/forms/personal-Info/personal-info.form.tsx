@@ -1,27 +1,39 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import { useRouter } from "next/navigation";
 import { useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
 
 import { Input } from "@/features/common/components/ui/input";
 import { Button } from "@/features/common/components/ui/button";
 import { FormProgress } from "../form-progress/FormProgress";
 import { personalInfoSchema } from "./personal-info.schema";
-import { personalInfoAction } from "./personal-info.action";
+import { RouteLinks } from "@/features/common/utils";
+import { parseFormData } from "@/features/onboarding/components/forms/utils/parse-form-data";
 
 export const PersonalInfoForm = () => {
-	const [lastResult, action] = useFormState(personalInfoAction, undefined);
+	const router = useRouter();
 
 	const [form, fields] = useForm({
-		// Sync the result of last submission
-		lastResult,
-
-		// Reuse the validation logic on the client
-		onValidate({ formData }) {
-			return parseWithZod(formData, { schema: personalInfoSchema });
+		onValidate: ({ formData }) => {
+			return parseFormData({ formData, schema: personalInfoSchema });
 		},
+		onSubmit: (e, context) => {
+			e.preventDefault();
 
+			const formData = parseFormData({
+				formData: context.formData,
+				schema: personalInfoSchema,
+			});
+
+			if (formData.status !== "success") {
+				return formData.reply();
+			}
+
+			const formValues = formData.value;
+			//do whatever you want with the formValues
+
+			router.push(RouteLinks.welcome.info());
+		},
 		shouldValidate: "onBlur",
 		shouldRevalidate: "onInput",
 	});
@@ -30,7 +42,7 @@ export const PersonalInfoForm = () => {
 		<div>
 			<FormProgress progressValue={25} />
 
-			<form id={form.id} onSubmit={form.onSubmit} action={action}>
+			<form id={form.id} onSubmit={form.onSubmit}>
 				<Input
 					label="Phone number"
 					placeholder="+1 (555) 000-0000"

@@ -1,14 +1,12 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import { useRouter } from "next/navigation";
 import { useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
 
 import { Input } from "@/features/common/components/ui/input";
 import { Button } from "@/features/common/components/ui/button";
 import { FormProgress } from "../form-progress/FormProgress";
 import { userInfoSchema } from "./user-info.schema";
-import { userInfoFormAction } from "./user-info.action";
 import {
 	Select,
 	SelectContent,
@@ -20,15 +18,32 @@ import {
 } from "@/features/common/components/ui/select";
 import { ErrorMessage } from "@/features/common/components/ErrorMessage";
 import { Label } from "@/features/common/components/Label";
+import { RouteLinks } from "@/features/common/utils";
+import { parseFormData } from "@/features/onboarding/components/forms/utils/parse-form-data";
 
 export const UserInfoForm = () => {
-	const [lastResult, action] = useFormState(userInfoFormAction, undefined);
+	const router = useRouter();
 
 	const [form, fields] = useForm({
-		lastResult,
+		onValidate: ({ formData }) => {
+			return parseFormData({ formData, schema: userInfoSchema });
+		},
+		onSubmit: (e, context) => {
+			e.preventDefault();
 
-		onValidate({ formData }) {
-			return parseWithZod(formData, { schema: userInfoSchema });
+			const formData = parseFormData({
+				formData: context.formData,
+				schema: userInfoSchema,
+			});
+
+			if (formData.status !== "success") {
+				return formData.reply();
+			}
+
+			const formValues = formData.value;
+			//do whatever you want with the formValues
+
+			router.push(RouteLinks.welcome.interests());
 		},
 
 		shouldValidate: "onBlur",
@@ -39,7 +54,7 @@ export const UserInfoForm = () => {
 		<div>
 			<FormProgress progressValue={50} />
 
-			<form id={form.id} onSubmit={form.onSubmit} action={action}>
+			<form id={form.id} onSubmit={form.onSubmit}>
 				<Select name={fields.city.name}>
 					<Label>I live in</Label>
 					<SelectTrigger className="bg-3deg-choco-150 h-12 mt-1">

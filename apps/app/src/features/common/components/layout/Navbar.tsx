@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HiPlus, HiMenu, HiX } from "react-icons/hi";
 
 import { cn } from "../../utils";
+import { AvatarDropdownMenu } from "./avatar-dropdown-menu";
 
 const navLinks = [
 	{ href: "/", label: "Home" },
@@ -43,22 +44,33 @@ export const NavBar = () => {
 					))}
 				</div>
 
-				<Link
-					href="#"
-					className="gap-2 items-center hidden lg:flex text-3deg-black-300 border text-sm rounded-3xl px-5 py-1 border-3deg-choco-300"
-				>
-					<p>Add a place</p>
-					<HiPlus className="text-3deg-black-300" />
-				</Link>
+				<div className="flex gap-2 items-center">
+					<Link
+						href="#"
+						className="gap-2 items-center hidden lg:flex text-3deg-black-300 border text-sm rounded-3xl px-5 py-1 border-3deg-choco-300"
+					>
+						<p>Add a place</p>
+						<HiPlus className="text-3deg-black-300" />
+					</Link>
 
-				{/* Hamburger Menu Icon */}
-				<button className="lg:hidden text-3deg-black-300" onClick={toggleMenu}>
-					{isMenuOpen ? (
-						<HiX className="w-6 h-6" />
-					) : (
-						<HiMenu className="w-6 h-6" />
-					)}
-				</button>
+					<AvatarDropdownMenu className="hidden lg:block" />
+				</div>
+
+				<div className="lg:hidden flex gap-2 justify-end lg:items-center">
+					<AvatarDropdownMenu />
+
+					{/* Hamburger Menu Icon */}
+					<button
+						className="lg:hidden text-3deg-black-300"
+						onClick={toggleMenu}
+					>
+						{isMenuOpen ? (
+							<HiX className="w-6 h-6" />
+						) : (
+							<HiMenu className="w-6 h-6" />
+						)}
+					</button>
+				</div>
 			</div>
 
 			{/* Mobile Menu */}

@@ -4,7 +4,7 @@ interface Props {
 	rent: number;
 }
 
-const SampleData = {
+export const SampleData = {
 	title: "West Hollywood",
 	location:
 		"65 Camberwell Church St. Peckham, Greater London, SE5 8TR, United Kingdom",
@@ -12,5 +12,9 @@ const SampleData = {
 } satisfies Props;
 
 export const ListingData: Props[] = Array.from({ length: 6 }, () => ({
+	...SampleData,
+}));
+
+export const ListingData3: Props[] = Array.from({ length: 3 }, () => ({
 	...SampleData,
 }));

@@ -1,26 +1,42 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import { useRouter } from "next/navigation";
 import { useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
 
 import { Button } from "@/features/common/components/ui/button";
 import { FormProgress } from "../form-progress/FormProgress";
 import { interestsSchema } from "./interests.schema";
-import { interestAction } from "./interests.action";
 import { Checkbox } from "@/features/common/components/ui/checkbox";
+
+import { RouteLinks } from "@/features/common/utils";
+import { parseFormData } from "@/features/onboarding/components/forms/utils/parse-form-data";
 import { cn } from "@/features/common/utils";
+import { Label } from "@/features/common/components/Label";
 
 export const InterestsForm = () => {
-	const [lastResult, action] = useFormState(interestAction, undefined);
+	const router = useRouter();
 
 	const [form, fields] = useForm({
-		lastResult,
-
-		onValidate({ formData }) {
-			return parseWithZod(formData, { schema: interestsSchema });
+		onValidate: ({ formData }) => {
+			return parseFormData({ formData, schema: interestsSchema });
 		},
+		onSubmit: (e, context) => {
+			e.preventDefault();
 
+			const formData = parseFormData({
+				formData: context.formData,
+				schema: interestsSchema,
+			});
+
+			if (formData.status !== "success") {
+				return formData.reply();
+			}
+
+			const formValues = formData.value;
+			//do whatever you want with the formValues
+
+			router.push(RouteLinks.welcome.socials());
+		},
 		shouldValidate: "onBlur",
 		shouldRevalidate: "onInput",
 	});
@@ -29,7 +45,7 @@ export const InterestsForm = () => {
 		<div>
 			<FormProgress progressValue={75} />
 
-			<form id={form.id} onSubmit={form.onSubmit} action={action}>
+			<form id={form.id} onSubmit={form.onSubmit}>
 				<div className="space-y-3 mb-7">
 					{InterestOptions.map((interest) => (
 						<div
@@ -38,10 +54,16 @@ export const InterestsForm = () => {
 								"flex justify-between items-center border border-3deg-greenish-100 rounded-2xl p-3 hover:cursor-pointer"
 							)}
 						>
-							{interest}
+							<Label
+								htmlFor={interest}
+								className="text-base hover:cursor-pointer"
+							>
+								{interest}
+							</Label>
 							<Checkbox
 								className="border-3deg-black-150 data-[state=checked]:border-none"
 								name={fields.interests.name}
+								id={interest}
 							/>
 						</div>
 					))}

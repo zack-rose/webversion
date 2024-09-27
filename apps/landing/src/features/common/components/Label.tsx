@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import { cn } from "../utils";
 
 interface Props
 	extends React.DetailedHTMLProps<
@@ -6,9 +7,16 @@ interface Props
 		HTMLLabelElement
 	> {}
 
-export const Label = ({ children, ...props }: PropsWithChildren<Props>) => {
+export const Label = ({
+	children,
+	className,
+	...props
+}: PropsWithChildren<Props>) => {
 	return (
-		<label className="text-3deg-black-300 text-sm font-medium" {...props}>
+		<label
+			className={cn("text-3deg-black-300 text-sm font-medium", className)}
+			{...props}
+		>
 			{children}
 		</label>
 	);

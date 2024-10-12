@@ -1,18 +1,20 @@
-import Image from "next/image";
-import { HiPencil, HiLink } from "react-icons/hi2";
-import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { cn } from "../common/utils";
+import Image from "next/image"
+import { HiPencil, HiLink } from "react-icons/hi2"
+import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
+import { cn } from "../common/utils"
 
 interface Props {
-	containerClassName?: string;
-	imageContainerClassName?: string;
-	pencilClassName?: string;
+	containerClassName?: string
+	imageContainerClassName?: string
+	pencilClassName?: string
+	showFollowButton?: boolean
 }
 
 export const ProfileInfo = ({
 	containerClassName,
 	imageContainerClassName,
 	pencilClassName,
+	showFollowButton = true,
 }: Props) => {
 	return (
 		<section
@@ -50,9 +52,11 @@ export const ProfileInfo = ({
 					London, England
 				</p>
 
-				<button className="border border-3deg-choco-300 rounded-3xl py-1 px-4 text-3deg-black-300 text-sm">
-					Follow
-				</button>
+				{showFollowButton && (
+					<button className="border border-3deg-choco-300 rounded-3xl py-1 px-4 text-3deg-black-300 text-sm">
+						Follow
+					</button>
+				)}
 
 				<div className="flex gap-3 justify-between items-center mt-5 mb-6">
 					<a href="#" className="bg-3deg-white-200 p-2 rounded-full">
@@ -70,5 +74,5 @@ export const ProfileInfo = ({
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}

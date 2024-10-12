@@ -111,7 +111,7 @@ export const RentalListingCard = ({
 				</div>
 			</div>
 
-			<Link href="#">
+			<Link href="/listing/current-listing-id">
 				<div className="flex justify-between items-center">
 					<h5 className="font-medium text-3deg-black-300">{title}</h5>
 					<p className="text-sm text-3deg-black-300">
@@ -123,7 +123,7 @@ export const RentalListingCard = ({
 					{location}
 				</p>
 
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-2 flex-wrap">
 					<Pill>
 						<MdOutlineAddBusiness className="text-3deg-black-300 text-xl" />
 						<p className="text-3deg-black-300 text-sm">Rent</p>

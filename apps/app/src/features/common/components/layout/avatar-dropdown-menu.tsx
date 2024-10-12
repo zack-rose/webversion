@@ -65,8 +65,8 @@ export const AvatarDropdownMenu = ({ className }: AvatarProps) => {
 };
 
 const mainMenuLinks = [
-	{ label: "My network", href: "#" },
-	{ label: "Member Resources", href: "#" },
+	{ label: "My network", href: "/network" },
+	{ label: "Member Resources", href: "/member-resources" },
 	{ label: "Favorite places", href: "/favorite-places" },
 	{ label: "Messages", href: "#" },
 	{ label: "Settings", href: "#" },

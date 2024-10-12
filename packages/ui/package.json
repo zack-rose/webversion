@@ -1,0 +1,43 @@
+{
+	"name": "@threedegrees/ui",
+	"type": "module",
+	"scripts": {
+		"build:ui": "tsup",
+		"build:tailwind": "tailwindcss -i ./src/styles/index.css -o ./dist/styles.css --minify",
+		"build": "run-s build:*",
+		"dev:ui": "tsup --watch",
+		"dev:tailwind": "tailwindcss -i ./src/styles/index.css -o ./dist/styles.css --watch",
+		"dev": "run-p dev:*"
+	},
+	"exports": {
+		"./components": "./dist/src/components/index.js",
+		"./utils": "./dist/src/utils/index.js",
+		"./tailwind-config": "./dist/tailwind.config.js",
+		"./css": "./dist/styles.css"
+	},
+	"devDependencies": {
+		"@threedegrees/typescript-config": "workspace:*",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"next": "14.2.6",
+		"npm-run-all": "^4.1.5",
+		"tailwindcss": "^3.4.1",
+		"tailwindcss-animate": "^1.0.7",
+		"tsup": "^8.3.0",
+		"typescript": "latest"
+	},
+	"dependencies": {
+		"@radix-ui/react-icons": "^1.3.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.436.0",
+		"react-icons": "^5.3.0",
+		"tailwind-merge": "^2.5.2"
+	},
+	"peerDependencies": {
+		"next": "14.2.6",
+		"react": "^18",
+		"react-dom": "^18"
+	}
+}

@@ -17,3 +17,9 @@ input:-webkit-autofill:active {
 .content-spacing {
 	@apply px-[5%] xl:px-[10%];
 }
+
+.custom-scrollbar {
+	overflow: auto;
+	scrollbar-color: #d8704a #cfc3b3;
+	scrollbar-width: thin;
+}

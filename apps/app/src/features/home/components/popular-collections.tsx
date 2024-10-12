@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
-import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react"
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi2"
+import Autoplay from "embla-carousel-autoplay"
 
 import {
 	type CarouselApi,
 	Carousel,
 	CarouselContent,
 	CarouselItem,
-} from "@/features/common/components/ui/carousel";
-import Image from "next/image";
+} from "@/features/common/components/ui/carousel"
+import Image from "next/image"
 
 const collections = [
 	"Paris",
@@ -21,13 +21,13 @@ const collections = [
 	"Germany",
 	"Italy",
 	"Malta",
-];
+]
 
 export const PopularCollections = () => {
-	const [api, setApi] = useState<CarouselApi>();
+	const [api, setApi] = useState<CarouselApi>()
 
-	const handleClickPrev = () => api?.scrollPrev();
-	const handleClickNext = () => api?.scrollNext();
+	const handleClickPrev = () => api?.scrollPrev()
+	const handleClickNext = () => api?.scrollNext()
 
 	return (
 		<section className="content-spacing relative">
@@ -57,7 +57,7 @@ export const PopularCollections = () => {
 				plugins={[
 					Autoplay({
 						delay: 3500,
-						playOnInit: true,
+						playOnInit: false,
 					}),
 				]}
 			>
@@ -86,5 +86,5 @@ export const PopularCollections = () => {
 				</CarouselContent>
 			</Carousel>
 		</section>
-	);
-};
+	)
+}

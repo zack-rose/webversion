@@ -1,0 +1,17 @@
+{
+  "extends": "@threedegrees/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["node"],
+    "module": "esnext",
+    "moduleResolution": "bundler"
+  },
+  "include": ["src/**/*", "tailwind.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -6,15 +6,19 @@ import { cn } from "@/features/common/utils";
 
 interface Props {
 	className?: string;
+	imageContainerClassName?: string;
 }
 
-export const AddPersonAvatar = ({ className }: Props) => {
+export const AddPersonAvatar = ({
+	className,
+	imageContainerClassName,
+}: Props) => {
 	return (
 		<Link
 			href="/profile/random-person"
 			className={cn("space-y-3 cursor-pointer w-[5rem]", className)}
 		>
-			<div className="relative size-[4rem]">
+			<div className={cn("relative size-[4rem]", imageContainerClassName)}>
 				<Image
 					src="/images/avatar.jpeg"
 					className="rounded-full border-[3px] border-3deg-orange-100"

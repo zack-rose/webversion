@@ -46,7 +46,7 @@ export const NavBar = () => {
 
 				<div className="flex gap-2 items-center">
 					<Link
-						href="#"
+						href="/add-place"
 						className="gap-2 items-center hidden lg:flex text-3deg-black-300 border text-sm rounded-3xl px-5 py-1 border-3deg-choco-300"
 					>
 						<p>Add a place</p>
@@ -56,7 +56,7 @@ export const NavBar = () => {
 					<AvatarDropdownMenu className="hidden lg:block" />
 				</div>
 
-				<div className="lg:hidden flex gap-2 justify-end lg:items-center">
+				<div className="lg:!hidden flex gap-2 justify-end lg:items-center">
 					<AvatarDropdownMenu />
 
 					{/* Hamburger Menu Icon */}

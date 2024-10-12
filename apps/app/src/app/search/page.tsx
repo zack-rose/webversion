@@ -1,6 +1,5 @@
-import { Hero } from "@/features/home/components";
-import { SearchView } from "@/features/common/components/search-view";
-import { SearchResults } from "@/features/search/components/search-results";
+import { Hero, SearchView } from "@/features/home/components"
+import { SearchResults } from "@/features/search/components/search-results"
 
 const SearchScreen = () => {
 	return (
@@ -9,7 +8,7 @@ const SearchScreen = () => {
 			<SearchView className="content-spacing my-8" />
 			<SearchResults />
 		</main>
-	);
-};
+	)
+}
 
-export default SearchScreen;
+export default SearchScreen

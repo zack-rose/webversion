@@ -1,12 +1,21 @@
-import { ProfileInfo, MyprofileListings } from "@/features/my-profile";
+import {
+	ProfileInfo,
+	MySpacesAndRecommendations,
+	CommonMembers,
+} from "@/features/my-profile"
 
 const UserprofileById = () => {
 	return (
 		<main className="content-spacing bg-3deg-cream-200">
-			<ProfileInfo pencilClassName="md:bottom-[-0.2rem] md:right-0" />
-			<MyprofileListings />
-		</main>
-	);
-};
+			<ProfileInfo
+				containerClassName="flex-row place-content-center md:gap-10"
+				imageContainerClassName="size-[4rem] xxsm:size-[6.5rem] md:size-[12rem]"
+			/>
 
-export default UserprofileById;
+			<CommonMembers />
+			<MySpacesAndRecommendations />
+		</main>
+	)
+}
+
+export default UserprofileById

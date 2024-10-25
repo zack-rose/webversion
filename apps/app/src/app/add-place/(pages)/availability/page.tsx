@@ -20,7 +20,6 @@ const AddPlaceAvailability = () => {
 				<AddaPlaceDescription
 					description="How long is it available for? Tick all that apply."
 					progress={40}
-					headerClassName="text-2xl md:text-3xl lg:text-4xl"
 				/>
 
 				<form className="mt-6" onSubmit={(e) => e.preventDefault()}>

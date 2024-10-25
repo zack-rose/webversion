@@ -28,7 +28,7 @@ export const Hero = () => {
 					<Image src="/images/brand-logo.png" alt="" fill />
 				</div>
 
-				<p className="text-white text-center py-5 font-medium">
+				<p className="text-white text-center pt-5 pb-8 font-medium">
 					A members network of beautiful homes to rent and swap
 				</p>
 

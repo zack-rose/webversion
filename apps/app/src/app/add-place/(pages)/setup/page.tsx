@@ -12,11 +12,7 @@ const AddPlaceSetup = () => {
 	return (
 		<section className="pb-[10%] flex items-center md:gap-[5%] lg:gap-[10%]">
 			<div className="w-full md:w-[45%] lg:w-2/5">
-				<AddaPlaceDescription
-					description="What is the set up?"
-					progress={60}
-					headerClassName="text-2xl md:text-3xl lg:text-4xl"
-				/>
+				<AddaPlaceDescription description="What is the set up?" progress={60} />
 
 				<form className="mt-6" onSubmit={(e) => e.preventDefault()}>
 					<div className="space-y-3 mb-6">

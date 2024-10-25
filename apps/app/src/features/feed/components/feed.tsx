@@ -5,7 +5,7 @@ import { FeedCard } from "./feed-card";
 export const Feed = () => {
 	return (
 		<main className="bg-3deg-cream-200 px-[5%] lg:px-[15%] xl:px-[25%] pb-[5%]">
-			<h1 className="uppercase text-center text-3deg-choco-100 text-3xl py-8">
+			<h1 className="uppercase text-center text-3deg-choco-100 text-5xl py-8 font-grifinito">
 				Feed
 			</h1>
 

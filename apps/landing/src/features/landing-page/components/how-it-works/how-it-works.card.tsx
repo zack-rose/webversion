@@ -13,7 +13,9 @@ export const HowItWorksCard = ({ title, content, imagePath }: Props) => {
 				<Image src={imagePath} className="rounded-xl" alt={title} fill />
 			</div>
 
-			<h4 className="pt-3 pb-2 text-3deg-black-300 font-semibold">{title}</h4>
+			<h4 className="pt-3 pb-2 text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
+				{title}
+			</h4>
 
 			<p className="text-3deg-choco-200 text-sm">{content}</p>
 		</div>

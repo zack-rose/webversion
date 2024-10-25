@@ -8,13 +8,14 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/features/common/components/ui/accordion";
+import { faqQuestions } from "@/features/member-resources/faq";
 
 const MemberResources = () => {
 	return (
 		<div>
 			<div className="pb-[5%] content-spacing bg-3deg-cream-200">
 				<div className="mb-11">
-					<h1 className="uppercase text-3deg-choco-100 text-2xl xsm:!text-4xl py-8 mb-6">
+					<h1 className="uppercase text-3deg-choco-100 text-2xl xsm:!text-5xl py-8 mb-6 font-grifinito">
 						member Resources
 					</h1>
 
@@ -86,23 +87,17 @@ const MemberResources = () => {
 				<h5 className="text-3deg-black-100 font-semibold ">FAQ</h5>
 
 				<Accordion type="single" collapsible className="w-full">
-					{accordionContent.map((item, i) => (
+					{faqQuestions.map((faq, i) => (
 						<AccordionItem
 							key={i}
-							value={`item-${i}`}
+							value={`item-${i}-${faq.question}`}
 							className="border-3deg-greenish-400"
 						>
 							<AccordionTrigger className="text-3deg-black-100 font-medium text-sm hover:no-underline">
-								{item}
+								{faq.question}
 							</AccordionTrigger>
 							<AccordionContent className="text-sm text-3deg-black-100">
-								You can book a trip by going to our Mobile App (iOS or Android).
-								Once downloaded, we recommend getting started by exploring all
-								of our great homes! You can add a trip to your wishlist directly
-								by clicking the "+" button! Because we are a community of
-								primary homes, our inventory is changing daily. By opening a
-								wishlist, you will get a notification for any new match, as soon
-								as it pops up!
+								<p dangerouslySetInnerHTML={{ __html: faq.answer }} />
 							</AccordionContent>
 						</AccordionItem>
 					))}
@@ -113,12 +108,3 @@ const MemberResources = () => {
 };
 
 export default MemberResources;
-
-const accordionContent = [
-	"How do I book a trip?",
-	"How does hosting work?",
-	"Can I bring pets on my trip?",
-	"Can I list multiple homes?",
-	"Can I take my own home profile photos?",
-	"How do I join?",
-];

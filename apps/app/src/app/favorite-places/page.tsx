@@ -4,7 +4,7 @@ import { ListingData } from "@/features/feed/components/sample-data";
 const FavoritePlacesScreen = () => {
 	return (
 		<main className="content-spacing bg-3deg-cream-200 pb-[5%]">
-			<h1 className="uppercase text-3deg-choco-100 text-3xl py-8">
+			<h1 className="uppercase text-3deg-choco-100 text-3xl py-8 font-grifinito lg:text-5xl">
 				favorite places
 			</h1>
 

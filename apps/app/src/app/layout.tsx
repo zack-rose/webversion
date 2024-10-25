@@ -6,8 +6,8 @@ import { SafeArea } from "./safe-area";
 import { Footer } from "@threedegrees/ui/components";
 import { NavBar } from "@/features/common/components/layout/Navbar";
 
-import "./globals.css";
 import "@threedegrees/ui/css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,17 +31,17 @@ export default function RootLayout({
 
 	return (
 		<html lang="en">
-			<Script
-				id="googleMapsKey"
-				src={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`}
-				strategy="beforeInteractive"
-			/>
-
 			<SafeArea />
 			<body className={inter.className}>
 				<NavBar />
 				{children}
 				<Footer />
+
+				<Script
+					id="googleMapsKey"
+					src={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`}
+					strategy="beforeInteractive"
+				/>
 			</body>
 		</html>
 	);

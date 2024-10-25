@@ -1,13 +1,13 @@
-import Image from "next/image"
-import { HiPencil, HiLink } from "react-icons/hi2"
-import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
-import { cn } from "../common/utils"
+import Image from "next/image";
+import { HiPencil, HiLink } from "react-icons/hi2";
+import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { cn } from "../common/utils";
 
 interface Props {
-	containerClassName?: string
-	imageContainerClassName?: string
-	pencilClassName?: string
-	showFollowButton?: boolean
+	containerClassName?: string;
+	imageContainerClassName?: string;
+	pencilClassName?: string;
+	showFollowButton?: boolean;
 }
 
 export const ProfileInfo = ({
@@ -39,7 +39,7 @@ export const ProfileInfo = ({
 			</div>
 
 			<div className="flex flex-col place-items-center">
-				<h1 className="uppercase text-3deg-black-300 font-bold text-3xl pt-4 pb-2">
+				<h1 className="uppercase text-3deg-black-300 text-6xl pt-4 pb-2 font-grifinito">
 					Jane west
 				</h1>
 
@@ -74,5 +74,5 @@ export const ProfileInfo = ({
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};

@@ -14,17 +14,17 @@ export const PricingSection = () => {
 
 	return (
 		<section
-			className="bg-cover bg-center bg-no-repeat 2xl:h-[80vh] w-full py-[20%] md:py-[5%] px-[5%] xsm:px-[8%] flex flex-col-reverse md:grid md:grid-cols-2 gap-y-20 md:gap-6 items-center"
+			className="bg-cover bg-center bg-no-repeat 2xl:h-[80vh] w-full py-[20%] md:py-[5%] px-[5%] xl:px-[10%] flex flex-col-reverse lg:grid lg:grid-cols-2 gap-y-20 lg:gap-6 items-center"
 			style={{
 				backgroundImage: "url('/images/pricing-3degrees.png')",
 			}}
 		>
-			<div className="bg-3deg-choco-500 rounded-lg py-6 px-4 lg:px-8 xl:w-11/12 2xl:w-4/5">
-				<h2 className="text-center text-3deg-black-300 text-2xl xl:text-4xl">
+			<div className="bg-3deg-choco-500 rounded-lg py-6 px-4 lg:px-5 xl:px-8 xl:max-w-[33.375rem]">
+				<h2 className="text-center text-3deg-black-300 text-5xl md:text-6xl font-grifinito">
 					SWAP & STAY FOR A <br /> FRACTION OF THE COST
 				</h2>
 
-				<div className="flex flex-col xl:flex-row mx-auto my-8 justify-evenly rounded-lg bg-3deg-cream-350 w-fit">
+				<div className="flex flex-col md:grid grid-cols-2 mx-auto my-8 justify-evenly rounded-lg bg-3deg-cream-350 w-fit">
 					<button
 						className={cn("p-8 rounded-lg text-center", {
 							"border border-3deg-cream-350 bg-3deg-cream-400":

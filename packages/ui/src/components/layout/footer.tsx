@@ -6,25 +6,27 @@ import { NavigationLinks, LegalLinks, SocialLinks } from "./footer-links";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-3deg-greenish-100 content-spacing py-[15%] md:pt-[5%] md:pb-[3%] space-y-10">
-			<div className="flex flex-col lg:flex-row gap-6">
-				<div className="space-y-4 lg:w-1/4">
-					<Link href="/">
-						<Image
-							src="/images/brand-logo-secondary.svg"
-							alt="threedegrees brand"
-							width={150}
-							height={200}
-						/>
-					</Link>
+		<footer className="bg-3deg-greenish-100 content-spacing py-[15%] md:pt-[5%] md:pb-[3%] space-y-8">
+			<div className="flex flex-col md:!flex-row gap-6">
+				<div className="md:w-1/4">
+					<div className="space-y-4 lg:max-w-[16rem]">
+						<Link href="/">
+							<Image
+								src="/images/brand-logo-secondary.svg"
+								alt="threedegrees brand"
+								width={150}
+								height={200}
+							/>
+						</Link>
 
-					<p className="text-3deg-black-200 text-sm">
-						Design amazing digital experiences that create more happy in the
-						world.
-					</p>
+						<p className="text-3deg-black-200 text-sm">
+							Design amazing digital experiences that create more happy in the
+							world.
+						</p>
+					</div>
 				</div>
 
-				<div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:w-3/4 lg:place-items-center lg:items-start">
+				<div className="grid gap-6 grid-cols-3 md:grid-cols-3 md:w-[55%] lg:place-items-center lg:items-start md:mx-auto">
 					<div className="space-y-4">
 						<h6 className="text-3deg-black-200 text-sm">Navigation</h6>
 
@@ -69,7 +71,7 @@ export const Footer = () => {
 				</div>
 			</div>
 
-			<div className="flex flex-col md:flex-row justify-between items-center md:px-[10%] lg:px-[20%] gap-5">
+			<div className="flex flex-row items-center mx-auto place-content-center gap-4 md:gap-16">
 				<div>
 					<h5 className="pb-2 font-medium text-3deg-black-300 text-center">
 						iOS

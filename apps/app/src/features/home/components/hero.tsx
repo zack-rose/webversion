@@ -11,7 +11,6 @@ import {
 	CarouselItem,
 	type CarouselApi,
 } from "@/features/common/components/ui/carousel";
-import clsx from "clsx";
 import { cn } from "@/features/common/utils";
 
 const CarouselData = Array.from({ length: 8 });
@@ -65,7 +64,7 @@ export const Hero = ({ buttonLinkClassName }: Props) => {
 								<div className="absolute bottom-0 left-0 right-0 p-4">
 									<div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
 										<div className="space-y-2">
-											<h1 className="text-3deg-cream-200 text-4xl lg:text-6xl uppercase">
+											<h1 className="text-3deg-cream-200 text-4xl lg:text-8xl uppercase font-grifinito">
 												The monarch
 											</h1>
 											<p className="text-sm text-white">Camberwell, London</p>

@@ -15,7 +15,6 @@ const AddPlaceOfferings = () => {
 				<AddaPlaceDescription
 					description="What are you offering?"
 					progress={20}
-					headerClassName="text-2xl md:text-3xl lg:text-4xl"
 				/>
 
 				<form className="mt-6" onSubmit={(e) => e.preventDefault()}>

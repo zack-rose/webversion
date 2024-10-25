@@ -11,8 +11,8 @@ export const ContactUsForm = () => {
 				backgroundImage: "url('/images/contact-3degrees.png')",
 			}}
 		>
-			<form className="bg-3deg-choco-500 rounded-lg py-6 px-4 md:px-8 xl:w-2/5 2xl:w-1/3">
-				<h2 className="text-center text-3deg-black-300 text-5xl">
+			<form className="bg-3deg-choco-500 rounded-lg py-6 px-4 md:px-8 lg:max-w-[33.375rem]">
+				<h2 className="text-center text-3deg-black-300 text-5xl lg:text-6xl font-grifinito">
 					Stay in touch
 				</h2>
 				<p className="text-center text-3deg-black-300 pt-2 pb-8">

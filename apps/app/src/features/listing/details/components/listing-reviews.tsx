@@ -4,9 +4,7 @@ import { Avatar } from "@/features/common/components/avatar";
 export const ListingReviews = () => {
 	return (
 		<div className="space-y-3 my-9">
-			<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
-				Reviews
-			</h3>
+			<h3 className="text-3deg-black-300 text-3xl">Reviews</h3>
 
 			<div className="grid md:grid-cols-3 gap-4">
 				{Array.from({ length: 3 }).map((_item, i) => (

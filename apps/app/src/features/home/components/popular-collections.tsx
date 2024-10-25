@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
-import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react"
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi2"
+import Autoplay from "embla-carousel-autoplay"
 
 import {
 	type CarouselApi,
 	Carousel,
 	CarouselContent,
 	CarouselItem,
-} from "@/features/common/components/ui/carousel";
-import Image from "next/image";
+} from "@/features/common/components/ui/carousel"
+import Image from "next/image"
 
 const collections = [
 	"Paris",
@@ -21,19 +21,19 @@ const collections = [
 	"Germany",
 	"Italy",
 	"Malta",
-];
+]
 
 export const PopularCollections = () => {
-	const [api, setApi] = useState<CarouselApi>();
+	const [api, setApi] = useState<CarouselApi>()
 
-	const handleClickPrev = () => api?.scrollPrev();
-	const handleClickNext = () => api?.scrollNext();
+	const handleClickPrev = () => api?.scrollPrev()
+	const handleClickNext = () => api?.scrollNext()
 
 	return (
 		<section className="content-spacing relative">
 			<div className="flex justify-between items-center mb-6">
-				<h3 className="text-base xxsm:text-xl xsm:text-2xl md:text-3xl lg:text-5xl text-3deg-choco-100 uppercase font-grifinito">
-					POPULAR CITIES
+				<h3 className="text-base xxsm:text-xl xsm:text-2xl md:text-3xl lg:text-4xl text-3deg-choco-100 uppercase">
+					Collections
 				</h3>
 
 				<div className="flex gap-4 items-center">
@@ -86,5 +86,5 @@ export const PopularCollections = () => {
 				</CarouselContent>
 			</Carousel>
 		</section>
-	);
-};
+	)
+}

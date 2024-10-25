@@ -51,7 +51,7 @@ export const UserInfoForm = () => {
 	});
 
 	return (
-		<div className="w-[85%] md:w-[22.125rem]">
+		<div>
 			<FormProgress progressValue={50} />
 
 			<form id={form.id} onSubmit={form.onSubmit}>

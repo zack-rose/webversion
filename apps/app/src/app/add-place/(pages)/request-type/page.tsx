@@ -17,7 +17,7 @@ const AddPlaceRequestTypes = () => {
 			<AddaPlaceDescription
 				description="Are you looking to house swap to a specific place?"
 				progress={30}
-				headerClassName="text-center"
+				headerClassName="text-2xl md:text-3xl lg:text-4xl text-center"
 				descriptionClassName="text-sm md:text-base"
 			/>
 

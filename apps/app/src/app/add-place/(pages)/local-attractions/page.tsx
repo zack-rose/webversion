@@ -11,7 +11,7 @@ const AddPlaceLocalAttractions = () => {
 	return (
 		<section className="flex flex-col justify-center items-center h-full md:w-[70%] lg:w-[55%] xl:w-1/3 2xl:w-1/4 mx-auto pb-[10%]">
 			<div className="w-full space-y-4">
-				<h2 className="text-3deg-black-300 text-4xl md:text-5xl text-start font-grifinito">
+				<h2 className="text-3deg-black-300 text-2xl md:text-3xl lg:text-4xl text-start">
 					Local Favourites
 				</h2>
 

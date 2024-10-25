@@ -8,7 +8,7 @@ export const MembershipBenefitSection = () => {
 	return (
 		<section className="content-spacing pb-[5%]">
 			<div className="flex justify-between items-center mb-6 flex-wrap">
-				<h3 className="text-base xxsm:text-xl xsm:text-2xl md:text-3xl lg:text-5xl text-3deg-choco-100 uppercase font-grifinito">
+				<h3 className="text-base xxsm:text-xl xsm:text-2xl md:text-3xl lg:text-4xl text-3deg-choco-100 uppercase">
 					Membership benefits
 				</h3>
 

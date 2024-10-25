@@ -14,8 +14,8 @@ export const BrowseRentalListings = () => {
 	return (
 		<section className="bg-3deg-cream-200 content-spacing pt-10 pb-[10%]">
 			<div className="flex justify-between items-center mb-6">
-				<h3 className="text-3xl md:text-6xl text-3deg-choco-100 uppercase font-grifinito">
-					Browse Our homes
+				<h3 className="text-3xl lg:text-5xl text-3deg-choco-100 uppercase">
+					Browse
 				</h3>
 
 				<OutlineButton

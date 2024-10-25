@@ -11,9 +11,7 @@ export const ListingRecommendedSpots = () => {
 	return (
 		<div className="space-y-4">
 			<div className="flex flex-wrap justify-between items-center">
-				<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
-					Recommended spots:
-				</h3>
+				<h3 className="text-3deg-black-300 text-3xl">Recommended spots:</h3>
 
 				<div className="flex gap-2">
 					{["Bars", "Restaurants", "Coffee"].map((item) => (

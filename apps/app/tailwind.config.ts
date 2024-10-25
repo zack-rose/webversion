@@ -19,9 +19,6 @@ const config: Config = {
 				xxsm: "375px",
 				xsm: "425px",
 			},
-			fontFamily: {
-				grifinito: ['"Grifinito L"', "sans-serif"],
-			},
 			fontSize: {
 				"13px": ["0.8125rem", "0.983rem"],
 			},

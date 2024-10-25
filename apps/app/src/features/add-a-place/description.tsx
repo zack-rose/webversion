@@ -16,12 +16,7 @@ export const AddaPlaceDescription = ({
 }: Props) => {
 	return (
 		<div>
-			<h2
-				className={cn(
-					"text-3deg-black-300 text-4xl md:text-5xl font-grifinito",
-					headerClassName
-				)}
-			>
+			<h2 className={cn("text-3deg-black-300 text-4xl", headerClassName)}>
 				About your place
 			</h2>
 			<p className={cn("text-3deg-choco-650 my-2", descriptionClassName)}>

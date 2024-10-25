@@ -13,7 +13,7 @@ export const Welcome = () => {
 
 	return (
 		<div>
-			<h2 className="text-center text-3deg-black-300 text-4xl md:text-5xl xl:text-6xl uppercase mb-5 font-grifinito">
+			<h2 className="text-center text-3deg-black-300 text-2xl xl:text-3xl uppercase mb-5">
 				Welcome to the future of living
 			</h2>
 

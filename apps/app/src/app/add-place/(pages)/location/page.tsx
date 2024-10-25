@@ -12,7 +12,7 @@ const AddPlaceLocation = () => {
 			<AddaPlaceDescription
 				description="Enter your address so we can place a pin near in on the map. Please note, we will never share your exact address."
 				progress={50}
-				headerClassName="text-center"
+				headerClassName="text-2xl md:text-3xl lg:text-4xl text-center"
 				descriptionClassName="text-sm md:text-base text-center"
 			/>
 

@@ -4,15 +4,15 @@ import Image from "next/image";
 export const AboutUs = () => {
 	return (
 		<section
-			className="bg-cover bg-center bg-no-repeat h-full w-full py-[20%] md:py-[5%] px-[5%] xl:px-[10%] flex flex-col-reverse lg:grid lg:grid-cols-2 gap-y-20 lg:gap-6"
+			className="bg-cover bg-center bg-no-repeat h-full w-full py-[20%] md:py-[5%] px-[10%] flex flex-col-reverse md:grid md:grid-cols-2 gap-y-20 md:gap-6"
 			style={{
 				backgroundImage: "url('/images/about-3-degrees.png')",
 			}}
 			id="about"
 		>
-			<div className="w-full md:w-[30rem] xl:max-w-[33.375rem] mx-auto">
+			<div>
 				<div className="bg-3deg-choco-500 rounded-lg p-6 space-y-5">
-					<h3 className="text-3xl md:text-5xl text-3deg-choco-100 uppercase font-grifinito">
+					<h3 className="text-3xl lg:text-5xl text-3deg-choco-100 uppercase">
 						about us
 					</h3>
 					<p className="text-3deg-black-300">

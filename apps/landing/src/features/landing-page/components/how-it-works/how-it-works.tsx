@@ -6,7 +6,7 @@ export const HowItWorks = () => {
 			className="bg-3deg-cream-200 content-spacing pt-10"
 			id="how-it-works"
 		>
-			<h3 className="text-3xl lg:text-5xl text-3deg-choco-100 pb-6 uppercase">
+			<h3 className="text-3xl md:text-6xl text-3deg-choco-100 pb-6 uppercase font-grifinito">
 				How it Works
 			</h3>
 

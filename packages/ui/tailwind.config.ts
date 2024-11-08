@@ -25,7 +25,9 @@ export default {
 						"100": "#2A2F27",
 						"150": "#040404",
 						"200": "#50524F",
+						"250": "#1E1E1E",
 						"300": "#322914",
+						"400": "#1C1B1F",
 					},
 					white: {
 						"100": "#F4F1EE",
@@ -35,6 +37,7 @@ export default {
 						"100": "#B4B5A2",
 						"200": "#515550",
 						"300": "#41463F",
+						"400": "#979885",
 					},
 					cream: {
 						"100": "#CFC3B3",
@@ -46,6 +49,7 @@ export default {
 						"400": "#FFFAEF",
 						"450": "#EAE7DF",
 						"500": "#B3AEA4",
+						"550": "#F6F3EC",
 					},
 					choco: {
 						"100": "#463B23",
@@ -89,12 +93,20 @@ export default {
 			},
 			keyframes: {
 				"accordion-down": {
-					from: { height: "0" },
-					to: { height: "var(--radix-accordion-content-height)" },
+					from: {
+						height: "0",
+					},
+					to: {
+						height: "var(--radix-accordion-content-height)",
+					},
 				},
 				"accordion-up": {
-					from: { height: "var(--radix-accordion-content-height)" },
-					to: { height: "0" },
+					from: {
+						height: "var(--radix-accordion-content-height)",
+					},
+					to: {
+						height: "0",
+					},
 				},
 			},
 			animation: {

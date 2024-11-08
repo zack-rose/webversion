@@ -1,15 +1,16 @@
-import { ProfileInfo, MyprofileListings } from "@/features/my-profile"
+import { ProfileInfo, MyprofileListings } from "@/features/my-profile";
 
 const MyProfile = () => {
 	return (
 		<main className="content-spacing bg-3deg-cream-200">
 			<ProfileInfo
-				pencilClassName="md:bottom-[-0.2rem] md:right-0"
+				pencilClassName="!right-12"
 				showFollowButton={false}
+				imageContainerClassName="size-[18rem]"
 			/>
 			<MyprofileListings />
 		</main>
-	)
-}
+	);
+};
 
-export default MyProfile
+export default MyProfile;

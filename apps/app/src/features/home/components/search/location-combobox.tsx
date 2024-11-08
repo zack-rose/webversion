@@ -56,8 +56,6 @@ export const LocationCombobox = ({ buttonClassName }: Props) => {
 				<Command className="bg-3deg-choco-500">
 					<CommandInput
 						placeholder="Search anywhere..."
-						// className="rounded-md border border-3deg-cream-150"
-						// cmdk-input-wrapper="rounded-md border border-3deg-cream-150"
 						className="h-8"
 						commandInputWrapperClassName="rounded-md border border-3deg-cream-150 mb-2"
 					/>

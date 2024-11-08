@@ -14,7 +14,7 @@ const AddPlacePhotos = () => {
 	return (
 		<section className="flex flex-col justify-center items-center h-full md:w-[60%] lg:w-[45%] xl:w-1/3 2xl:w-1/4 mx-auto pb-[10%]">
 			<div>
-				<h2 className="text-3deg-black-300 text-2xl md:text-3xl lg:text-4xl text-center">
+				<h2 className="text-3deg-black-300 text-4xl md:text-5xl text-center font-grifinito">
 					Upload photos
 				</h2>
 				<p className="text-3deg-choco-650 my-2 text-sm md:text-base text-center">

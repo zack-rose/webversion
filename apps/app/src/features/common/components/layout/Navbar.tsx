@@ -22,7 +22,7 @@ export const NavBar = () => {
 	return (
 		<nav className="sticky top-0 bg-3deg-cream-200 content-spacing py-5 z-[99]">
 			<div className="flex justify-between items-center z-50">
-				<Link href="/">
+				<Link href="/" className="mx-auto lg:!mx-0">
 					<Image
 						src="/images/brand-logo-secondary.svg"
 						alt="threedegrees brand"
@@ -57,13 +57,10 @@ export const NavBar = () => {
 				</div>
 
 				<div className="lg:!hidden flex gap-2 justify-end lg:items-center">
-					<AvatarDropdownMenu />
+					<AvatarDropdownMenu imgClassName="border-2 lg:border-0 border-3deg-orange-100" />
 
 					{/* Hamburger Menu Icon */}
-					<button
-						className="lg:hidden text-3deg-black-300"
-						onClick={toggleMenu}
-					>
+					<button className="hidden text-3deg-black-300" onClick={toggleMenu}>
 						{isMenuOpen ? (
 							<HiX className="w-6 h-6" />
 						) : (

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { useRouter } from "next/navigation"
-import { HiOutlineMapPin } from "react-icons/hi2"
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
+import { HiOutlineMapPin } from "react-icons/hi2";
 
 import {
 	Select,
@@ -12,26 +12,32 @@ import {
 	SelectLabel,
 	SelectTrigger,
 	SelectValue,
-} from "@/features/common/components/ui/select"
-import { cn } from "@/features/common/utils"
-import { AnywhereDropdown } from "./anywhere-dropdown"
-import { LocationCombobox } from "./location-combobox"
-import { locations } from "./data"
+} from "@/features/common/components/ui/select";
+import { cn } from "@/features/common/utils";
+import { AnywhereDropdown } from "./anywhere-dropdown";
+import { LocationCombobox } from "./location-combobox";
+import { locations } from "./data";
 
 interface Props {
-	className?: string
+	className?: string;
+	locationButtonClassname?: string;
+	anytimeButtonClassname?: string;
 }
 
-export const SearchView = ({ className }: Props) => {
-	const router = useRouter()
-	const inputRef = useRef<HTMLInputElement>(null)
+export const SearchView = ({
+	className,
+	locationButtonClassname,
+	anytimeButtonClassname,
+}: Props) => {
+	const router = useRouter();
+	const inputRef = useRef<HTMLInputElement>(null);
 
 	const onSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
-		const searchValue = inputRef.current?.value || ""
+		const searchValue = inputRef.current?.value || "";
 
-		e.preventDefault()
-		return router.push(`/search?key=${encodeURIComponent(searchValue)}`)
-	}
+		e.preventDefault();
+		return router.push(`/search?key=${encodeURIComponent(searchValue)}`);
+	};
 
 	return (
 		<form
@@ -41,12 +47,12 @@ export const SearchView = ({ className }: Props) => {
 			)}
 			onSubmit={onSubmitSearch}
 		>
-			<div className="flex gap-3 items-center flex-wrap">
-				<LocationCombobox />
-				<AnywhereDropdown />
+			<div className="grid grid-cols-2 lg:flex gap-3 items-center flex-wrap">
+				<LocationCombobox buttonClassName={locationButtonClassname} />
+				<AnywhereDropdown buttonClassName={anytimeButtonClassname} />
 			</div>
 
-			<div>
+			<div className="hidden md:block">
 				<Select>
 					<SelectTrigger className="w-[200px] bg-3deg-cream-200 border border-3deg-cream-500 text-3deg-choco-100">
 						<HiOutlineMapPin className="size-4 text-3deg-choco-100" />
@@ -66,5 +72,5 @@ export const SearchView = ({ className }: Props) => {
 				</Select>
 			</div>
 		</form>
-	)
-}
+	);
+};

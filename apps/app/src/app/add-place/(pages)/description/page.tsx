@@ -37,7 +37,7 @@ const AddPlaceDescription = () => {
 			<AddaPlaceDescription
 				description="How would you describe your home?"
 				progress={70}
-				headerClassName="text-2xl md:text-3xl lg:text-4xl text-center"
+				headerClassName="text-center"
 				descriptionClassName="text-sm md:text-base"
 			/>
 

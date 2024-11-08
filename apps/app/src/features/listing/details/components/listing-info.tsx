@@ -24,7 +24,7 @@ export const ListingInfo = () => {
 			<div className="flex flex-col md:flex-row gap-5 xl:gap-[15%]">
 				<div className="md:w-3/5 xl:w-[60%]">
 					<div className="flex justify-between items-center">
-						<h5 className="font-medium text-3deg-black-300 text-3xl">
+						<h5 className="font-medium text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
 							West Hollywood
 						</h5>
 						<p className="text-3deg-black-100 text-lg">
@@ -82,7 +82,7 @@ export const ListingInfo = () => {
 
 			<div className="lg:w-3/5 xl:w-[55%] mt-4 space-y-9">
 				<div className="space-y-3">
-					<h3 className="text-3deg-black-300 text-3xl">
+					<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
 						What you need to know:
 					</h3>
 					<ul className="list-disc list-inside">
@@ -103,7 +103,7 @@ export const ListingInfo = () => {
 				</div>
 
 				<div className="space-y-3">
-					<h3 className="text-3deg-black-300 text-3xl">
+					<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
 						A note about the home:
 					</h3>
 
@@ -124,7 +124,9 @@ export const ListingInfo = () => {
 				</div>
 
 				<div className="space-y-4">
-					<h3 className="text-3deg-black-300 text-3xl">About the owner:</h3>
+					<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
+						About the owner:
+					</h3>
 
 					<div className="flex justify-between items-center">
 						<div className="flex items-center gap-3">
@@ -148,7 +150,9 @@ export const ListingInfo = () => {
 				</div>
 
 				<div className="space-y-4">
-					<h3 className="text-3deg-black-300 text-3xl">Property features:</h3>
+					<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
+						Property features:
+					</h3>
 
 					<div className="flex flex-wrap gap-3">
 						{propertyFeatures.map((item) => (
@@ -163,7 +167,9 @@ export const ListingInfo = () => {
 				</div>
 
 				<div className="space-y-3">
-					<h3 className="text-3deg-black-300 text-3xl">Location:</h3>
+					<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
+						Location:
+					</h3>
 					<p className="text-3deg-black-300 text-sm">
 						Located within the trendy 9 streets boutique neighborhood
 					</p>
@@ -180,7 +186,9 @@ export const ListingInfo = () => {
 
 				<div className="space-y-3">
 					<div className="flex justify-between items-center">
-						<h3 className="text-3deg-black-300 text-3xl">Rating:</h3>
+						<h3 className="text-3deg-black-300 text-[2.5rem] leading-10 font-grifinito">
+							Rating:
+						</h3>
 
 						<div className="flex items-center text-3deg-orange-100 gap-2">
 							<p className="text-sm font-medium">4.7</p>

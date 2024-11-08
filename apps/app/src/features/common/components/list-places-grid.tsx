@@ -22,7 +22,7 @@ export const ListPlacesGrid = ({
 	return (
 		<section className={cn(containerClassName)}>
 			<div className="flex justify-between items-center mb-6 flex-wrap">
-				<h3 className="text-base xxsm:text-xl xsm:text-2xl md:text-3xl lg:text-4xl text-3deg-choco-100 uppercase">
+				<h3 className="text-[2.5rem] lg:text-5xl text-3deg-choco-100 uppercase font-grifinito">
 					{sectionTitle}
 				</h3>
 

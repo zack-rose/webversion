@@ -1,6 +1,8 @@
 # dependencies
-/node_modules
-/.turbo
+node_modules
+dist
+.turbo
+.next
 
 # misc
 .DS_Store
@@ -16,3 +18,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# local env files
+.env*.local
+.env*.prod
+
+.eslintcache

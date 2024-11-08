@@ -23,7 +23,7 @@ export const SocialMediaInfoForm = () => {
 	});
 
 	return (
-		<div>
+		<div className="w-[85%] md:w-[22.125rem]">
 			<FormProgress progressValue={100} />
 
 			<form id={form.id} onSubmit={form.onSubmit} action={action}>

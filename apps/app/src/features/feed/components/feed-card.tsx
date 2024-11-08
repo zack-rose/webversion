@@ -9,16 +9,21 @@ import {
 
 interface Props {
 	variant?: "morning-blue" | "fawn" | "jasper";
+	className?: string;
 }
 
-export const FeedCard = ({ variant = "morning-blue" }: Props) => {
+export const FeedCard = ({ variant = "morning-blue", className }: Props) => {
 	return (
 		<div
-			className={cn("p-4 md:p-6 rounded-xl ", {
-				"bg-3deg-morning-blue-100": variant === "morning-blue",
-				"bg-3deg-fawn-100": variant === "fawn",
-				"bg-3deg-jasper-100": variant === "jasper",
-			})}
+			className={cn(
+				"p-4 md:p-6 rounded-xl",
+				{
+					"bg-3deg-morning-blue-100": variant === "morning-blue",
+					"bg-3deg-fawn-100": variant === "fawn",
+					"bg-3deg-jasper-100": variant === "jasper",
+				},
+				className
+			)}
 		>
 			<div className="flex gap-4 items-center">
 				<MdAccountCircle className="text-slate-500 size-16" />
@@ -40,7 +45,7 @@ export const FeedCard = ({ variant = "morning-blue" }: Props) => {
 				Looking for a swap, London for Miami this summer.
 			</h4>
 
-			<div className="flex justify-between items-center mt-[15%]">
+			<div className="flex justify-between items-center mt-[50%] lg:mt-[15%]">
 				<div className="flex gap-2">
 					<Pill>
 						<MdOutlineAddBusiness className="text-3deg-black-300 text-xl" />

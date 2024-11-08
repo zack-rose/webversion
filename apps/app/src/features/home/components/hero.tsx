@@ -11,7 +11,6 @@ import {
 	CarouselItem,
 	type CarouselApi,
 } from "@/features/common/components/ui/carousel";
-import clsx from "clsx";
 import { cn } from "@/features/common/utils";
 
 const CarouselData = Array.from({ length: 8 });
@@ -41,7 +40,7 @@ export const Hero = ({ buttonLinkClassName }: Props) => {
 	}, [api]);
 
 	return (
-		<section className="content-spacing">
+		<section className="content-spacing relative">
 			<Carousel
 				setApi={setApi}
 				plugins={[
@@ -63,18 +62,20 @@ export const Hero = ({ buttonLinkClassName }: Props) => {
 								/>
 
 								<div className="absolute bottom-0 left-0 right-0 p-4">
-									<div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
-										<div className="space-y-2">
-											<h1 className="text-3deg-cream-200 text-4xl lg:text-6xl uppercase">
+									<div className="flex flex-col md:!flex-row justify-between md:items-end gap-4">
+										<div className="space-y-0">
+											<h1 className="text-3deg-cream-200 text-6xl lg:text-8xl uppercase font-grifinito">
 												The monarch
 											</h1>
-											<p className="text-sm text-white">Camberwell, London</p>
+											<p className="text-sm text-3deg-cream-200 lg:text-white">
+												Camberwell, London
+											</p>
 										</div>
 
 										<Link
 											href="#"
 											className={cn(
-												"bg-3deg-cream-100 px-5 py-2 rounded-md w-fit",
+												"bg-3deg-cream-100 px-5 py-2 rounded-md w-fit hidden md:block",
 												buttonLinkClassName
 											)}
 										>
@@ -82,6 +83,19 @@ export const Hero = ({ buttonLinkClassName }: Props) => {
 												View home
 											</p>
 										</Link>
+
+										<div className="flex md:!hidden mx-auto gap-1 mt-2">
+											{CarouselData.map((_item, index) => (
+												<button
+													key={index}
+													className={cn("size-2 rounded-full space-x-1", {
+														"bg-white": currentSlide === index,
+														"bg-3deg-cream-200": currentSlide !== index,
+													})}
+													onClick={() => handleIndicatorClick(index)}
+												/>
+											))}
+										</div>
 									</div>
 								</div>
 							</div>
@@ -90,7 +104,7 @@ export const Hero = ({ buttonLinkClassName }: Props) => {
 				</CarouselContent>
 			</Carousel>
 
-			<div className="flex justify-center items-center mt-4 gap-2">
+			<div className="hidden md:flex justify-center items-center mt-4 gap-2">
 				{CarouselData.map((_item, index) => (
 					<button
 						key={index}

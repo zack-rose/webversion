@@ -13,9 +13,13 @@ import { cn } from "../../utils";
 
 interface AvatarProps {
 	className?: string;
+	imgClassName?: string;
 }
 
-export const AvatarDropdownMenu = ({ className }: AvatarProps) => {
+export const AvatarDropdownMenu = ({
+	className,
+	imgClassName,
+}: AvatarProps) => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -23,7 +27,7 @@ export const AvatarDropdownMenu = ({ className }: AvatarProps) => {
 					<Image
 						src="/images/avatar.jpeg"
 						alt="user avatar"
-						className="rounded-full"
+						className={cn("rounded-full", imgClassName)}
 						fill
 					/>
 				</div>
@@ -31,10 +35,10 @@ export const AvatarDropdownMenu = ({ className }: AvatarProps) => {
 
 			<DropdownMenuContent className="mt-4 bg-3deg-cream-450 w-[12rem] rounded-lg border-0 mr-[1rem] md:mr-[2.2rem] lg:mr-[3rem] xl:mr-[8.8rem]">
 				<DropdownMenuGroup className="space-y-1">
-					{mainMenuLinks.map((item) => (
+					{mainMenuLinks.map((item, i) => (
 						<DropdownMenuItem
 							className="focus:bg-3deg-cream-350 rounded-lg text-3deg-choco-250 text-sm font-medium"
-							key={item.href}
+							key={`${item.href}-${i}`}
 							asChild
 						>
 							<Link href={item.href} className="pl-2">
@@ -47,10 +51,10 @@ export const AvatarDropdownMenu = ({ className }: AvatarProps) => {
 				<DropdownMenuSeparator className="bg-3deg-cream-500 dark:bg-3deg-cream-500" />
 
 				<DropdownMenuGroup className="space-y-1">
-					{extraLinks.map((item) => (
+					{extraLinks.map((item, i) => (
 						<DropdownMenuItem
 							className="focus:bg-3deg-cream-350 rounded-lg text-3deg-choco-250 text-sm font-medium"
-							key={item.href}
+							key={`${item.href}-${i}`}
 							asChild
 						>
 							<Link href={item.href} className="pl-2">

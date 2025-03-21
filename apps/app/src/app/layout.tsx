@@ -4,7 +4,7 @@ import Script from "next/script";
 
 import { SafeArea } from "./safe-area";
 import { Footer } from "@threedegrees/ui/components";
-import { NavBar } from "@/features/common/components/layout/navbar";
+import { NavBar } from "@/features/common/components/layout/Navbar";
 import { MobileNav } from "@/features/common/components/layout/mobile-nav";
 
 import "@threedegrees/ui/css";
